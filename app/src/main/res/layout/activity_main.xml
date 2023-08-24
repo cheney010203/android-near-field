@@ -1,0 +1,129 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/purple_500"
+        android:gravity="center"
+        android:text="ATC"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/rl_connected"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_connected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+        <TextView
+            android:id="@+id/tv_last_connected"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="上次连接设备" />
+
+        <TextView
+            android:id="@+id/tv_tag_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_last_connected"
+            android:text="名称：" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_tag_name"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/tv_tag_name" />
+
+        <TextView
+            android:id="@+id/tv_tag_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_last_connected"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/tv_last_connected"
+            android:text="地址：" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_tag_address"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/tv_tag_address" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/bt_discovery"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:text="开始扫描"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/rv_list"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_connected"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_discovery" />
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/rv_list"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <Button
+            android:id="@+id/btn_mouse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="空中鼠标" />
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btn_keyboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="空中键盘" />
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btn_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="游戏手柄" />
+        <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btn_mirror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="镜像" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

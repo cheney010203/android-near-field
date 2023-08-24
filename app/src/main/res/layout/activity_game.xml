@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:id="@+id/keysButtons"
+        android:textAlignment="center">
+
+        <ImageView
+            android:id="@+id/left"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:tag="4"
+            android:src="@drawable/left"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/right"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:tag="7"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/right"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/left"/>
+
+
+
+        <ImageView
+            android:id="@+id/jump"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="150dp"
+            android:tag="13"
+            android:src="@drawable/jump"
+            android:layout_marginRight="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/hit"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="150dp"
+            android:tag="14"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/hit"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/jump"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

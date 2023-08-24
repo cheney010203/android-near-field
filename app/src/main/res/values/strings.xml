@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">BluetoothHIDDemo</string>
+    <string name="ununited">The device is not connected.\nClick button open bluetooth </string>
+    <string name="connected">The device is connected</string>
+    <string name="mouse_left">LEFT</string>
+    <string name="mouse_right">RIGHT</string>
+    <string name="mouse_middle">MIDDLE</string>
+    <string name="mouse_move_area">MOVE AREA</string>
+    <string name="toast_bluetooth_on">Bluetooth is on.</string>
+    <string name="toast_bluetooth_off">Bluetooth is off.</string>
+    <string name="toast_permission">Please enable the permission.</string>
+
+    <string name="label_server_ip">Server IP</string>
+
+    <string name="label_video_resolution">Resolution</string>
+    <string name="label_video_bitrate">Bitrate</string>
+    <string name="action_start">Start</string>
+    <string name="appswitch_button">=</string>
+    <string name="home_button">o</string>
+    <string name="back_button">v</string>
+
+    <string name="switch1">Nav Bar  (check this if target device does not have on-screen nav bar)</string>
+
+
+    <string-array name="options_resolution_keys">
+        <item>1920x1080</item>
+        <item>1280x720</item>
+        <item>800x448</item>
+        <item>640x360</item>
+    </string-array>
+
+    <string-array name="options_resolution_values">
+        <item>1920,1080</item>
+        <item>1280,720</item>
+        <item>800,448</item>
+        <item>640,360</item>
+    </string-array>
+
+    <string-array name="options_bitrate_keys">
+        <item>6 Mbps</item>
+        <item>4 Mbps</item>
+        <item>2 Mbps</item>
+        <item>1 Mbps</item>
+    </string-array>
+
+    <integer-array name="options_bitrate_values">
+        <item>6144000</item>
+        <item>4096000</item>
+        <item>2048000</item>
+        <item>1024000</item>
+    </integer-array>
+</resources>
